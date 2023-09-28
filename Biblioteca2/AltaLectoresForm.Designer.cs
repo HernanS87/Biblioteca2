@@ -35,11 +35,12 @@
             lblDNI = new Label();
             lblApellido = new Label();
             lblNombre = new Label();
+            btnClose = new Button();
             SuspendLayout();
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(404, 144);
+            btnAgregar.Location = new Point(421, 97);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(75, 23);
             btnAgregar.TabIndex = 13;
@@ -95,12 +96,23 @@
             lblNombre.TabIndex = 7;
             lblNombre.Text = "Nombre";
             // 
+            // btnClose
+            // 
+            btnClose.Location = new Point(421, 160);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(75, 23);
+            btnClose.TabIndex = 14;
+            btnClose.Text = "VOLVER";
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClose_Click;
+            // 
             // frmAltaLectores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 128);
             ClientSize = new Size(580, 304);
+            Controls.Add(btnClose);
             Controls.Add(btnAgregar);
             Controls.Add(txtDNI);
             Controls.Add(txtApellido);
@@ -124,5 +136,6 @@
         private Label lblDNI;
         private Label lblApellido;
         private Label lblNombre;
+        private Button btnClose;
     }
 }

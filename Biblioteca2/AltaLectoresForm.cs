@@ -35,5 +35,10 @@ namespace Biblioteca
                 MessageBox.Show("Ups! Este lector ya existe", "LECTOR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
