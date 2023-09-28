@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAltaLectores));
             btnAgregar = new Button();
             txtDNI = new TextBox();
             txtApellido = new TextBox();
@@ -40,77 +41,97 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(421, 97);
+            btnAgregar.BackColor = Color.FromArgb(216, 76, 65);
+            btnAgregar.FlatAppearance.BorderColor = Color.FromArgb(216, 76, 65);
+            btnAgregar.FlatAppearance.MouseOverBackColor = Color.FromArgb(122, 29, 24);
+            btnAgregar.FlatStyle = FlatStyle.Flat;
+            btnAgregar.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAgregar.ForeColor = Color.FromArgb(247, 246, 244);
+            btnAgregar.Location = new Point(414, 94);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(75, 23);
+            btnAgregar.Size = new Size(100, 41);
             btnAgregar.TabIndex = 13;
             btnAgregar.Text = "AGREGAR";
-            btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.UseVisualStyleBackColor = false;
             btnAgregar.Click += btnAgregar_Click;
             // 
             // txtDNI
             // 
-            txtDNI.Location = new Point(184, 188);
+            txtDNI.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDNI.Location = new Point(197, 185);
             txtDNI.Name = "txtDNI";
-            txtDNI.Size = new Size(140, 23);
+            txtDNI.Size = new Size(140, 24);
             txtDNI.TabIndex = 12;
             // 
             // txtApellido
             // 
-            txtApellido.Location = new Point(184, 143);
+            txtApellido.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txtApellido.Location = new Point(197, 140);
             txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(140, 23);
+            txtApellido.Size = new Size(140, 24);
             txtApellido.TabIndex = 11;
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(184, 94);
+            txtNombre.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNombre.Location = new Point(197, 91);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(140, 23);
+            txtNombre.Size = new Size(140, 24);
             txtNombre.TabIndex = 10;
             // 
             // lblDNI
             // 
             lblDNI.AutoSize = true;
-            lblDNI.Location = new Point(101, 188);
+            lblDNI.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDNI.Location = new Point(124, 185);
             lblDNI.Name = "lblDNI";
-            lblDNI.Size = new Size(27, 15);
+            lblDNI.Size = new Size(31, 17);
             lblDNI.TabIndex = 9;
             lblDNI.Text = "DNI";
             // 
             // lblApellido
             // 
             lblApellido.AutoSize = true;
-            lblApellido.Location = new Point(101, 143);
+            lblApellido.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lblApellido.Location = new Point(124, 140);
             lblApellido.Name = "lblApellido";
-            lblApellido.Size = new Size(51, 15);
+            lblApellido.Size = new Size(60, 17);
             lblApellido.TabIndex = 8;
             lblApellido.Text = "Apellido";
             // 
             // lblNombre
             // 
             lblNombre.AutoSize = true;
-            lblNombre.Location = new Point(101, 97);
+            lblNombre.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNombre.Location = new Point(124, 94);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(51, 15);
+            lblNombre.Size = new Size(58, 17);
             lblNombre.TabIndex = 7;
             lblNombre.Text = "Nombre";
             // 
             // btnClose
             // 
-            btnClose.Location = new Point(421, 160);
+            btnClose.BackColor = Color.FromArgb(216, 76, 65);
+            btnClose.FlatAppearance.BorderColor = Color.FromArgb(216, 76, 65);
+            btnClose.FlatAppearance.MouseOverBackColor = Color.FromArgb(122, 29, 24);
+            btnClose.FlatStyle = FlatStyle.Flat;
+            btnClose.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btnClose.ForeColor = Color.FromArgb(247, 246, 244);
+            btnClose.Location = new Point(414, 172);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(75, 23);
+            btnClose.Size = new Size(100, 41);
             btnClose.TabIndex = 14;
             btnClose.Text = "VOLVER";
-            btnClose.UseVisualStyleBackColor = true;
+            btnClose.UseVisualStyleBackColor = false;
             btnClose.Click += btnClose_Click;
             // 
             // frmAltaLectores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 192, 128);
+            BackColor = Color.FromArgb(247, 246, 244);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(580, 304);
             Controls.Add(btnClose);
             Controls.Add(btnAgregar);
@@ -120,6 +141,8 @@
             Controls.Add(lblDNI);
             Controls.Add(lblApellido);
             Controls.Add(lblNombre);
+            DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmAltaLectores";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AltaLectoresForm";
