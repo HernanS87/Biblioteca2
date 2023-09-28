@@ -29,6 +29,9 @@ namespace Biblioteca
             if (status)
             {
                 MessageBox.Show("Se cargó el lector correctamente", "LECTOR", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNombre.Text = "";
+                txtApellido.Text = "";
+                txtDNI.Text = "";
             }
             else
             {
