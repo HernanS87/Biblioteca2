@@ -3,3 +3,5 @@
 
 # Ignorar directorio obj/ en todas las ubicaciones del proyecto
 **/obj/
+# Ignorar directorio .vs/ en todas las ubicaciones del proyecto
+.vs/
