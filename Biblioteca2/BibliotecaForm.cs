@@ -32,6 +32,7 @@ namespace Biblioteca
         {
             this.Show();
         }
+              
 
         private void btnCargarLibros_Click(object sender, EventArgs e)
         {
@@ -73,6 +74,11 @@ namespace Biblioteca
             formPrestamos.Show();
             formPrestamos.FormClosed += formPrestamos_FormClosed;
             this.Hide();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 
