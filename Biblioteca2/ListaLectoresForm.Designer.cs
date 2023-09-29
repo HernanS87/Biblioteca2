@@ -28,57 +28,99 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaLectores));
             dtgvLectores = new DataGridView();
             Nombre = new DataGridViewTextBoxColumn();
             Apellido = new DataGridViewTextBoxColumn();
             DNI = new DataGridViewTextBoxColumn();
             Prestamos = new DataGridViewTextBoxColumn();
+            btnExit = new Button();
             ((System.ComponentModel.ISupportInitialize)dtgvLectores).BeginInit();
             SuspendLayout();
             // 
             // dtgvLectores
             // 
+            dtgvLectores.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dtgvLectores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgvLectores.BackgroundColor = SystemColors.ButtonFace;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Roboto", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dtgvLectores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dtgvLectores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvLectores.Columns.AddRange(new DataGridViewColumn[] { Nombre, Apellido, DNI, Prestamos });
-            dtgvLectores.Location = new Point(28, 39);
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Roboto Bk", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dtgvLectores.DefaultCellStyle = dataGridViewCellStyle2;
+            dtgvLectores.Location = new Point(35, 96);
             dtgvLectores.Name = "dtgvLectores";
+            dtgvLectores.RowHeadersVisible = false;
             dtgvLectores.RowTemplate.Height = 25;
             dtgvLectores.Size = new Size(577, 252);
             dtgvLectores.TabIndex = 1;
+            dtgvLectores.CellContentClick += dtgvLectores_CellContentClick;
             // 
             // Nombre
             // 
             Nombre.HeaderText = "Nombre";
             Nombre.Name = "Nombre";
-            Nombre.Width = 150;
             // 
             // Apellido
             // 
             Apellido.HeaderText = "Apellido";
             Apellido.Name = "Apellido";
-            Apellido.Width = 150;
             // 
             // DNI
             // 
             DNI.HeaderText = "DNI";
             DNI.Name = "DNI";
-            DNI.Width = 150;
             // 
             // Prestamos
             // 
             Prestamos.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             Prestamos.HeaderText = "Prestamos";
             Prestamos.Name = "Prestamos";
-            Prestamos.Width = 87;
+            Prestamos.Width = 95;
+            // 
+            // btnExit
+            // 
+            btnExit.BackColor = Color.Transparent;
+            btnExit.FlatAppearance.BorderColor = Color.FromArgb(247, 246, 244);
+            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.Font = new Font("Roboto", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            btnExit.ForeColor = Color.Gray;
+            btnExit.Location = new Point(666, 12);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(41, 41);
+            btnExit.TabIndex = 6;
+            btnExit.Text = "X";
+            btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += btnExit_Click;
             // 
             // frmListaLectores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(192, 192, 255);
-            ClientSize = new Size(652, 440);
+            BackColor = Color.FromArgb(247, 246, 244);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(719, 432);
+            ControlBox = false;
+            Controls.Add(btnExit);
             Controls.Add(dtgvLectores);
+            DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmListaLectores";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ListaLectoresForm";
@@ -94,5 +136,6 @@
         private DataGridViewTextBoxColumn Apellido;
         private DataGridViewTextBoxColumn DNI;
         private DataGridViewTextBoxColumn Prestamos;
+        private Button btnExit;
     }
 }

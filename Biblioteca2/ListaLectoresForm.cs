@@ -23,7 +23,6 @@ namespace Biblioteca
         {
             List<Lector> lista = biblioteca.getLectores();
 
-            dtgvLectores.RowHeadersVisible = false;
 
             foreach (Lector lector in lista)
             {
@@ -34,6 +33,16 @@ namespace Biblioteca
                 dtgvLectores.Rows[fila].Cells[2].Value = lector.Dni;
                 dtgvLectores.Rows[fila].Cells[3].Value = lector.Libros.Count;
             }
+        }
+
+        private void dtgvLectores_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
