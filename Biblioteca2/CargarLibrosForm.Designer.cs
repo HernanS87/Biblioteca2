@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCargarLibros));
             lblNombre = new Label();
             lblAutor = new Label();
             lblEditorial = new Label();
@@ -41,77 +42,100 @@
             // lblNombre
             // 
             lblNombre.AutoSize = true;
-            lblNombre.Location = new Point(136, 51);
+            lblNombre.BorderStyle = BorderStyle.FixedSingle;
+            lblNombre.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNombre.Location = new Point(108, 94);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(51, 15);
+            lblNombre.Size = new Size(60, 19);
             lblNombre.TabIndex = 0;
             lblNombre.Text = "Nombre";
             // 
             // lblAutor
             // 
             lblAutor.AutoSize = true;
-            lblAutor.Location = new Point(136, 97);
+            lblAutor.BorderStyle = BorderStyle.FixedSingle;
+            lblAutor.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAutor.Location = new Point(108, 140);
             lblAutor.Name = "lblAutor";
-            lblAutor.Size = new Size(37, 15);
+            lblAutor.Size = new Size(45, 19);
             lblAutor.TabIndex = 1;
             lblAutor.Text = "Autor";
             // 
             // lblEditorial
             // 
             lblEditorial.AutoSize = true;
-            lblEditorial.Location = new Point(136, 142);
+            lblEditorial.BorderStyle = BorderStyle.FixedSingle;
+            lblEditorial.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lblEditorial.Location = new Point(108, 185);
             lblEditorial.Name = "lblEditorial";
-            lblEditorial.Size = new Size(50, 15);
+            lblEditorial.Size = new Size(64, 19);
             lblEditorial.TabIndex = 2;
             lblEditorial.Text = "Editorial";
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(219, 48);
+            txtNombre.Font = new Font("Roboto", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNombre.Location = new Point(195, 91);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(140, 23);
+            txtNombre.Size = new Size(140, 22);
             txtNombre.TabIndex = 3;
             // 
             // txtAutor
             // 
-            txtAutor.Location = new Point(219, 97);
+            txtAutor.Font = new Font("Roboto", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtAutor.Location = new Point(195, 140);
             txtAutor.Name = "txtAutor";
-            txtAutor.Size = new Size(140, 23);
+            txtAutor.Size = new Size(140, 22);
             txtAutor.TabIndex = 4;
             // 
             // txtEditorial
             // 
-            txtEditorial.Location = new Point(219, 142);
+            txtEditorial.Font = new Font("Roboto", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEditorial.Location = new Point(195, 185);
             txtEditorial.Name = "txtEditorial";
-            txtEditorial.Size = new Size(140, 23);
+            txtEditorial.Size = new Size(140, 22);
             txtEditorial.TabIndex = 5;
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(439, 98);
+            btnAgregar.BackColor = Color.FromArgb(216, 76, 65);
+            btnAgregar.FlatAppearance.BorderColor = Color.FromArgb(216, 76, 65);
+            btnAgregar.FlatAppearance.MouseOverBackColor = Color.FromArgb(122, 29, 24);
+            btnAgregar.FlatStyle = FlatStyle.Flat;
+            btnAgregar.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAgregar.ForeColor = Color.FromArgb(247, 246, 244);
+            btnAgregar.Location = new Point(419, 93);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(75, 23);
+            btnAgregar.Size = new Size(100, 41);
             btnAgregar.TabIndex = 6;
             btnAgregar.Text = "AGREGAR";
-            btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.UseVisualStyleBackColor = false;
             btnAgregar.Click += btnAgregar_Click;
             // 
             // btnVolver
             // 
-            btnVolver.Location = new Point(439, 142);
+            btnVolver.BackColor = Color.FromArgb(216, 76, 65);
+            btnVolver.FlatAppearance.BorderColor = Color.FromArgb(216, 76, 65);
+            btnVolver.FlatAppearance.MouseOverBackColor = Color.FromArgb(122, 29, 24);
+            btnVolver.FlatStyle = FlatStyle.Flat;
+            btnVolver.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btnVolver.ForeColor = Color.FromArgb(247, 246, 244);
+            btnVolver.Location = new Point(419, 168);
             btnVolver.Name = "btnVolver";
-            btnVolver.Size = new Size(75, 23);
+            btnVolver.Size = new Size(100, 41);
             btnVolver.TabIndex = 7;
             btnVolver.Text = "VOLVER";
-            btnVolver.UseVisualStyleBackColor = true;
+            btnVolver.UseVisualStyleBackColor = false;
             btnVolver.Click += btnVolver_Click;
             // 
             // frmCargarLibros
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(128, 255, 255);
-            ClientSize = new Size(572, 221);
+            BackColor = Color.FromArgb(247, 246, 244);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(580, 304);
             Controls.Add(btnVolver);
             Controls.Add(btnAgregar);
             Controls.Add(txtEditorial);
@@ -120,6 +144,8 @@
             Controls.Add(lblEditorial);
             Controls.Add(lblAutor);
             Controls.Add(lblNombre);
+            DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmCargarLibros";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CargarLibrosForm";

@@ -29,6 +29,10 @@ namespace Biblioteca
             if (status)
             {
                 MessageBox.Show("Se cargó el libro correctamente", "LIBRO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNombre.Text = "";
+                txtAutor.Text = "";
+                txtEditorial.Text = "";
+
             }
             else
             {
