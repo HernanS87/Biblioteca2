@@ -37,19 +37,28 @@ namespace Biblioteca
 
         private void btnPedirLibro_Click(object sender, EventArgs e)
         {
-            Libro libro = biblioteca.buscarLibro(txtLibro.Text);
             Lector lector = biblioteca.buscarLector(txtDni.Text);
-            if (libro != null && lector != null)
+
+            if (lector != null && lector.Libros.Count >= 3)
             {
-                lector.Libros.Add(libro);
-                biblioteca.eliminarLibro(libro.getTitulo());
-                prestamos.Add(new Prestamo(lector.Dni, libro.getTitulo()));
-                CargarTabla();
-                MessageBox.Show("Se realizó el prestamo correctamente", "PRESTAMO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("TOPE DE PRESTAMO ALCANZADO. El lector ya tiene tres libros en préstamo.", "PRESTAMO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Ups! no se pudo realizar el prestamo", "PRESTAMO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Libro libro = biblioteca.buscarLibro(txtLibro.Text);
+
+                if (libro != null && lector != null)
+                {
+                    lector.Libros.Add(libro);
+                    biblioteca.eliminarLibro(libro.getTitulo());
+                    prestamos.Add(new Prestamo(lector.Dni, libro.getTitulo()));
+                    CargarTabla();
+                    MessageBox.Show("Se realizó el prestamo correctamente", "PRESTAMO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Ups! no se pudo realizar el prestamo", "PRESTAMO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -66,7 +75,6 @@ namespace Biblioteca
                 }
             }
 
-            dtgvPrestamos.RowHeadersVisible = false;
             CargarTabla();
 
         }
@@ -96,6 +104,11 @@ namespace Biblioteca
             {
                 MessageBox.Show("Ups! lector incorrecto", "DEVOLUCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
