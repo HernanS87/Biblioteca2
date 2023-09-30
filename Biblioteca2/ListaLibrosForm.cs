@@ -33,12 +33,7 @@ namespace Biblioteca
                 dtgvLibros.Rows[fila].Cells[1].Value = libro.Autor;
                 dtgvLibros.Rows[fila].Cells[2].Value = libro.Editorial;
             }
-        }
-
-        private void dtgvLibros_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        }             
 
         private void btnExit_Click(object sender, EventArgs e)
         {
