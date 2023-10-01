@@ -125,6 +125,7 @@
             dtgvPrestamos.Columns.AddRange(new DataGridViewColumn[] { Lector, Libro });
             dtgvPrestamos.Location = new Point(73, 204);
             dtgvPrestamos.Name = "dtgvPrestamos";
+            dtgvPrestamos.ReadOnly = true;
             dtgvPrestamos.RowHeadersVisible = false;
             dtgvPrestamos.RowTemplate.Height = 25;
             dtgvPrestamos.Size = new Size(577, 133);
@@ -134,11 +135,13 @@
             // 
             Lector.HeaderText = "Lector DNI";
             Lector.Name = "Lector";
+            Lector.ReadOnly = true;
             // 
             // Libro
             // 
             Libro.HeaderText = "Nombre del libro";
             Libro.Name = "Libro";
+            Libro.ReadOnly = true;
             // 
             // label1
             // 

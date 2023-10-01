@@ -45,7 +45,7 @@
             dtgvLibros.BackgroundColor = SystemColors.ButtonFace;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Roboto", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
@@ -55,6 +55,7 @@
             dtgvLibros.Columns.AddRange(new DataGridViewColumn[] { Titulo, Autor, Editorial });
             dtgvLibros.Location = new Point(56, 71);
             dtgvLibros.Name = "dtgvLibros";
+            dtgvLibros.ReadOnly = true;
             dtgvLibros.RowHeadersVisible = false;
             dtgvLibros.RowTemplate.Height = 25;
             dtgvLibros.Size = new Size(577, 252);
@@ -64,23 +65,26 @@
             // 
             Titulo.HeaderText = "Titulo";
             Titulo.Name = "Titulo";
+            Titulo.ReadOnly = true;
             // 
             // Autor
             // 
             Autor.HeaderText = "Autor";
             Autor.Name = "Autor";
+            Autor.ReadOnly = true;
             // 
             // Editorial
             // 
             Editorial.HeaderText = "Editorial";
             Editorial.Name = "Editorial";
+            Editorial.ReadOnly = true;
             // 
             // btnExit
             // 
             btnExit.BackColor = Color.Transparent;
             btnExit.FlatAppearance.BorderColor = Color.FromArgb(247, 246, 244);
             btnExit.FlatStyle = FlatStyle.Flat;
-            btnExit.Font = new Font("Roboto", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            btnExit.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Bold, GraphicsUnit.Point);
             btnExit.ForeColor = Color.Gray;
             btnExit.Location = new Point(650, 12);
             btnExit.Name = "btnExit";
