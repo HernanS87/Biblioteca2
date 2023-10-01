@@ -46,7 +46,7 @@
             btnAgregar.FlatAppearance.BorderColor = Color.FromArgb(216, 76, 65);
             btnAgregar.FlatAppearance.MouseOverBackColor = Color.FromArgb(122, 29, 24);
             btnAgregar.FlatStyle = FlatStyle.Flat;
-            btnAgregar.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAgregar.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnAgregar.ForeColor = Color.FromArgb(247, 246, 244);
             btnAgregar.Location = new Point(414, 94);
             btnAgregar.Name = "btnAgregar";
@@ -58,58 +58,61 @@
             // 
             // txtDNI
             // 
-            txtDNI.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDNI.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
             txtDNI.Location = new Point(197, 185);
             txtDNI.Name = "txtDNI";
-            txtDNI.Size = new Size(140, 24);
+            txtDNI.Size = new Size(140, 23);
             txtDNI.TabIndex = 12;
             // 
             // txtApellido
             // 
-            txtApellido.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txtApellido.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
             txtApellido.Location = new Point(197, 140);
             txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(140, 24);
+            txtApellido.Size = new Size(140, 23);
             txtApellido.TabIndex = 11;
             // 
             // txtNombre
             // 
-            txtNombre.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNombre.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
             txtNombre.Location = new Point(197, 91);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(140, 24);
+            txtNombre.Size = new Size(140, 23);
             txtNombre.TabIndex = 10;
             // 
             // lblDNI
             // 
             lblDNI.AutoSize = true;
-            lblDNI.BorderStyle = BorderStyle.FixedSingle;
-            lblDNI.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDNI.BackColor = Color.Transparent;
+            lblDNI.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDNI.ForeColor = Color.White;
             lblDNI.Location = new Point(108, 185);
             lblDNI.Name = "lblDNI";
-            lblDNI.Size = new Size(33, 19);
+            lblDNI.Size = new Size(33, 16);
             lblDNI.TabIndex = 9;
             lblDNI.Text = "DNI";
             // 
             // lblApellido
             // 
             lblApellido.AutoSize = true;
-            lblApellido.BorderStyle = BorderStyle.FixedSingle;
-            lblApellido.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lblApellido.BackColor = Color.Transparent;
+            lblApellido.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblApellido.ForeColor = Color.White;
             lblApellido.Location = new Point(108, 140);
             lblApellido.Name = "lblApellido";
-            lblApellido.Size = new Size(62, 19);
+            lblApellido.Size = new Size(65, 16);
             lblApellido.TabIndex = 8;
             lblApellido.Text = "Apellido";
             // 
             // lblNombre
             // 
             lblNombre.AutoSize = true;
-            lblNombre.BorderStyle = BorderStyle.FixedSingle;
-            lblNombre.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lblNombre.BackColor = Color.Transparent;
+            lblNombre.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblNombre.ForeColor = Color.White;
             lblNombre.Location = new Point(108, 94);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(60, 19);
+            lblNombre.Size = new Size(62, 16);
             lblNombre.TabIndex = 7;
             lblNombre.Text = "Nombre";
             // 
@@ -120,7 +123,7 @@
             btnClose.FlatAppearance.BorderColor = Color.FromArgb(216, 76, 65);
             btnClose.FlatAppearance.MouseOverBackColor = Color.FromArgb(122, 29, 24);
             btnClose.FlatStyle = FlatStyle.Flat;
-            btnClose.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btnClose.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnClose.ForeColor = Color.FromArgb(247, 246, 244);
             btnClose.Location = new Point(414, 172);
             btnClose.Name = "btnClose";

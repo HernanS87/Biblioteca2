@@ -62,7 +62,7 @@ namespace Biblioteca
 
         }
         private void btnPedirLibro_Click(object sender, EventArgs e)
-        {            
+        {
 
             string dniLector = txtDni.Text;
             string tituloLibro = txtLibro.Text;
@@ -72,7 +72,7 @@ namespace Biblioteca
             switch (resultado)
             {
                 case "PRESTAMO EXITOSO":
-                    MessageBox.Show("Se realizó el préstamo correctamente", "PRESTAMO EXITOSO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("PRESTAMO EXITOSO", "PRESTAMO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
                 case "LIBRO INEXISTENTE":
                     MessageBox.Show("LIBRO INEXISTENTE. El libro no existe en la biblioteca", "PRESTAMO", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -87,7 +87,7 @@ namespace Biblioteca
 
             CargarTabla();
         }
-    
+
 
         private void frmPrestamo_Load(object sender, EventArgs e)
         {

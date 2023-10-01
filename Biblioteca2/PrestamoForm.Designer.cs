@@ -50,11 +50,11 @@
             btnPedirLibro.FlatAppearance.BorderColor = Color.FromArgb(216, 76, 65);
             btnPedirLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(122, 29, 24);
             btnPedirLibro.FlatStyle = FlatStyle.Flat;
-            btnPedirLibro.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btnPedirLibro.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnPedirLibro.ForeColor = Color.FromArgb(247, 246, 244);
-            btnPedirLibro.Location = new Point(441, 39);
+            btnPedirLibro.Location = new Point(459, 47);
             btnPedirLibro.Name = "btnPedirLibro";
-            btnPedirLibro.Size = new Size(136, 41);
+            btnPedirLibro.Size = new Size(161, 41);
             btnPedirLibro.TabIndex = 13;
             btnPedirLibro.Text = "PEDIR LIBRO";
             btnPedirLibro.UseVisualStyleBackColor = false;
@@ -62,37 +62,41 @@
             // 
             // txtLibro
             // 
-            txtLibro.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txtLibro.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
             txtLibro.Location = new Point(235, 115);
             txtLibro.Name = "txtLibro";
-            txtLibro.Size = new Size(140, 24);
+            txtLibro.Size = new Size(140, 23);
             txtLibro.TabIndex = 11;
             // 
             // txtDni
             // 
-            txtDni.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDni.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
             txtDni.Location = new Point(235, 56);
             txtDni.Name = "txtDni";
-            txtDni.Size = new Size(140, 24);
+            txtDni.Size = new Size(140, 23);
             txtDni.TabIndex = 10;
             // 
             // lblLibro
             // 
             lblLibro.AutoSize = true;
-            lblLibro.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLibro.BackColor = Color.Transparent;
+            lblLibro.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblLibro.ForeColor = Color.White;
             lblLibro.Location = new Point(182, 118);
             lblLibro.Name = "lblLibro";
-            lblLibro.Size = new Size(41, 17);
+            lblLibro.Size = new Size(42, 16);
             lblLibro.TabIndex = 8;
             lblLibro.Text = "Libro";
             // 
             // lblDni
             // 
             lblDni.AutoSize = true;
-            lblDni.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            lblDni.Location = new Point(189, 59);
+            lblDni.BackColor = Color.Transparent;
+            lblDni.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDni.ForeColor = Color.White;
+            lblDni.Location = new Point(182, 59);
             lblDni.Name = "lblDni";
-            lblDni.Size = new Size(31, 17);
+            lblDni.Size = new Size(33, 16);
             lblDni.TabIndex = 7;
             lblDni.Text = "DNI";
             // 
@@ -103,11 +107,11 @@
             btnDevolverLibro.FlatAppearance.BorderColor = Color.FromArgb(216, 76, 65);
             btnDevolverLibro.FlatAppearance.MouseOverBackColor = Color.FromArgb(122, 29, 24);
             btnDevolverLibro.FlatStyle = FlatStyle.Flat;
-            btnDevolverLibro.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDevolverLibro.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnDevolverLibro.ForeColor = Color.FromArgb(247, 246, 244);
-            btnDevolverLibro.Location = new Point(441, 115);
+            btnDevolverLibro.Location = new Point(459, 115);
             btnDevolverLibro.Name = "btnDevolverLibro";
-            btnDevolverLibro.Size = new Size(136, 41);
+            btnDevolverLibro.Size = new Size(161, 41);
             btnDevolverLibro.TabIndex = 14;
             btnDevolverLibro.Text = "DEVOLVER LIBRO";
             btnDevolverLibro.UseVisualStyleBackColor = false;
@@ -139,10 +143,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Roboto", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(282, 184);
             label1.Name = "label1";
-            label1.Size = new Size(159, 17);
+            label1.Size = new Size(181, 16);
             label1.TabIndex = 16;
             label1.Text = "PRESTAMOS VIGENTES";
             // 
@@ -151,7 +155,7 @@
             btnExit.BackColor = Color.Transparent;
             btnExit.FlatAppearance.BorderColor = Color.FromArgb(247, 246, 244);
             btnExit.FlatStyle = FlatStyle.Flat;
-            btnExit.Font = new Font("Roboto", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            btnExit.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Bold, GraphicsUnit.Point);
             btnExit.ForeColor = Color.Gray;
             btnExit.Location = new Point(650, 12);
             btnExit.Name = "btnExit";
