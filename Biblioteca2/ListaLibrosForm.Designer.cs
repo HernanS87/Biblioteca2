@@ -59,7 +59,6 @@
             dtgvLibros.RowTemplate.Height = 25;
             dtgvLibros.Size = new Size(577, 252);
             dtgvLibros.TabIndex = 0;
-            dtgvLibros.CellContentClick += dtgvLibros_CellContentClick;
             // 
             // Titulo
             // 

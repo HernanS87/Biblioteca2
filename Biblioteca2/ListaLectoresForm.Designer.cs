@@ -69,7 +69,6 @@
             dtgvLectores.RowTemplate.Height = 25;
             dtgvLectores.Size = new Size(577, 252);
             dtgvLectores.TabIndex = 1;
-            dtgvLectores.CellContentClick += dtgvLectores_CellContentClick;
             // 
             // Nombre
             // 
