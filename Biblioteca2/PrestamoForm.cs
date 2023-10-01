@@ -119,17 +119,17 @@ namespace Biblioteca
                     lector.eliminarLibro(libro.Nombre);
                     prestamos.RemoveAll(prestamo => prestamo.LibroNombre == libro.Nombre);
                     CargarTabla();
-                    MessageBox.Show("Se devolvió libro correctamente", "DEVOLUCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("DEVOLUCIÓN EXITOSA", "DEVOLUCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 else
                 {
-                    MessageBox.Show("Ups! libro incorrecto", "DEVOLUCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("LIBRO INEXISTENTE. El lector no tiene asociado este libro como prestado", "DEVOLUCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Ups! lector incorrecto", "DEVOLUCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("LECTOR INEXISTENTE. El lector no se encuentra registrado en la biblioteca", "DEVOLUCIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

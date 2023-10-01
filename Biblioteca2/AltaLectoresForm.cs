@@ -21,23 +21,38 @@ namespace Biblioteca
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            String nombre = txtNombre.Text.Trim();
-            String apellido = txtApellido.Text.Trim();
-            String dni = txtDNI.Text.Trim();
+            string nombre = txtNombre.Text.Trim();
+            string apellido = txtApellido.Text.Trim();
+            string dniStr = txtDNI.Text.Trim();
 
-            bool status = biblioteca.altaLector(nombre, apellido, dni);
-            if (status)
+            if (!string.IsNullOrEmpty(nombre) && !string.IsNullOrEmpty(apellido))
             {
-                MessageBox.Show("Se cargó el lector correctamente", "LECTOR", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtNombre.Text = "";
-                txtApellido.Text = "";
-                txtDNI.Text = "";
+                if (int.TryParse(dniStr, out int dni) && dni >= 1000000 && dni <= 99999999)
+                {
+                    bool status = biblioteca.altaLector(nombre, apellido, dniStr);
+                    if (status)
+                    {
+                        MessageBox.Show("Se cargó el lector correctamente", "LECTOR", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtNombre.Text = "";
+                        txtApellido.Text = "";
+                        txtDNI.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ups! Este lector ya existe", "LECTOR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El DNI ingresado no es válido. Debe ser un número de 7 a 8 dígitos.", "LECTOR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Ups! Este lector ya existe", "LECTOR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Completa todos los campos correctamente", "LECTOR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void btnClose_Click(object sender, EventArgs e)
         {

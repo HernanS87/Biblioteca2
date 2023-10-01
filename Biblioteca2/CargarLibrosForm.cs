@@ -21,23 +21,31 @@ namespace Biblioteca
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            String nombre = txtNombre.Text.Trim();
-            String autor = txtAutor.Text.Trim();
-            String editorial = txtEditorial.Text.Trim();
+            string nombre = txtNombre.Text.Trim();
+            string autor = txtAutor.Text.Trim();
+            string editorial = txtEditorial.Text.Trim();
 
-            bool status = biblioteca.agregarLibro(nombre, autor, editorial);
-            if (status)
+            if (!string.IsNullOrEmpty(nombre) && !string.IsNullOrEmpty(autor) && !string.IsNullOrEmpty(editorial))
             {
-                MessageBox.Show("Se cargó el libro correctamente", "LIBRO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtNombre.Text = "";
-                txtAutor.Text = "";
-                txtEditorial.Text = "";
+                bool status = biblioteca.agregarLibro(nombre, autor, editorial);
+                if (status)
+                {
+                    MessageBox.Show("Se cargó el libro correctamente", "LIBRO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNombre.Text = "";
+                    txtAutor.Text = "";
+                    txtEditorial.Text = "";
 
-            }
+                }
+                else
+                {
+                    MessageBox.Show("Ups! Este libro ya existe", "LIBRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } 
             else
             {
-                MessageBox.Show("Ups! Este libro ya existe", "LIBRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Completa todos los campos correctamente", "LIBRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
