@@ -34,7 +34,7 @@ namespace Biblioteca
                 dtgvPrestamos.Rows[fila].Cells[1].Value = p.LibroNombre;
             }
         }
-        public string prestarLibro(string tituloLibro, string dniLector)
+            private string prestarLibro(string tituloLibro, string dniLector)
         {
             Lector lector = biblioteca.buscarLector(dniLector);
             Libro libro = biblioteca.buscarLibro(tituloLibro);
@@ -85,6 +85,8 @@ namespace Biblioteca
                     break;
             }
 
+            txtDni.Text = "";
+            txtLibro.Text = "";
             CargarTabla();
         }
 
@@ -103,7 +105,6 @@ namespace Biblioteca
             }
 
             CargarTabla();
-
         }
 
         private void btnDevolverLibro_Click(object sender, EventArgs e)
