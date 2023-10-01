@@ -34,33 +34,60 @@ namespace Biblioteca
                 dtgvPrestamos.Rows[fila].Cells[1].Value = p.LibroNombre;
             }
         }
-
-        private void btnPedirLibro_Click(object sender, EventArgs e)
+        public string prestarLibro(string tituloLibro, string dniLector)
         {
-            Lector lector = biblioteca.buscarLector(txtDni.Text);
+            Lector lector = biblioteca.buscarLector(dniLector);
+            Libro libro = biblioteca.buscarLibro(tituloLibro);
 
-            if (lector != null && lector.Libros.Count >= 3)
+            if (lector == null)
             {
-                MessageBox.Show("TOPE DE PRESTAMO ALCANZADO. El lector ya tiene tres libros en préstamo.", "PRESTAMO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return "LECTOR INEXISTENTE";
             }
-            else
-            {
-                Libro libro = biblioteca.buscarLibro(txtLibro.Text);
 
-                if (libro != null && lector != null)
-                {
-                    lector.Libros.Add(libro);
-                    biblioteca.eliminarLibro(libro.getTitulo());
-                    prestamos.Add(new Prestamo(lector.Dni, libro.getTitulo()));
-                    CargarTabla();
-                    MessageBox.Show("Se realizó el prestamo correctamente", "PRESTAMO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Ups! no se pudo realizar el prestamo", "PRESTAMO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            if (libro == null)
+            {
+                return "LIBRO INEXISTENTE";
             }
+
+            if (lector.Libros.Count >= 3)
+            {
+                return "TOPE DE PRESTAMO ALCANZADO";
+            }
+
+            lector.Libros.Add(libro);
+            biblioteca.eliminarLibro(libro.Nombre);
+            prestamos.Add(new Prestamo(lector.Dni, libro.Nombre));
+
+            return "PRESTAMO EXITOSO";
+
         }
+        private void btnPedirLibro_Click(object sender, EventArgs e)
+        {            
+
+            string dniLector = txtDni.Text;
+            string tituloLibro = txtLibro.Text;
+
+            string resultado = prestarLibro(tituloLibro, dniLector);
+
+            switch (resultado)
+            {
+                case "PRESTAMO EXITOSO":
+                    MessageBox.Show("Se realizó el préstamo correctamente", "PRESTAMO EXITOSO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+                case "LIBRO INEXISTENTE":
+                    MessageBox.Show("LIBRO INEXISTENTE. El libro no existe en la biblioteca", "PRESTAMO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+                case "TOPE DE PRESTAMO ALCANZADO":
+                    MessageBox.Show("TOPE DE PRESTAMO ALCANZADO. El lector ya tiene tres libros en préstamo.", "PRESTAMO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+                case "LECTOR INEXISTENTE":
+                    MessageBox.Show("LECTOR INEXISTENTE. El lector no se encuentra registrado en la biblioteca", "PRESTAMO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+            }
+
+            CargarTabla();
+        }
+    
 
         private void frmPrestamo_Load(object sender, EventArgs e)
         {
